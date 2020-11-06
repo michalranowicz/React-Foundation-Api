@@ -6,28 +6,28 @@ export const StoreContext = createContext(null);
 
 const StoreProvider = ({children})=>{
   const [foundations, setFoundations]= useState([]);
-  const [user, setUser]= useState(null);
 
  
 
-  const  fetchData = async () => {
+  const  fetchDataFoundation = async () => {
 
     const { data } = await request.get('/Foundation');
 
-    setFoundation(data);
+    setFoundations(data);
     
   };
 
+
+
   useEffect(()=>{
-    fetchData();
+    fetchDataFoundation();
+ 
   }, [])
 
   return(
     <StoreContext.Provider value={{
       foundations,
       setFoundations,
-      user,
-      setUser
     }}>
       {children}
     </StoreContext.Provider>
