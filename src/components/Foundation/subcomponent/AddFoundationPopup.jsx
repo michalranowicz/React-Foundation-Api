@@ -129,7 +129,7 @@ const AddFoundationPopup = ({
     }
     
   }, [isModalOpen]);
-  const correctLabel = isEditMode ? 'Edytuj fundacjE' : 'Dodaj fundację';
+  const correctLabel = isEditMode ? 'Edytuj fundację' : 'Dodaj fundację';
 
   const validationMessageComponent = validateMessage.length ? <p className={style('validate-message')}>{validateMessage}</p>: null
 
@@ -141,8 +141,8 @@ const AddFoundationPopup = ({
         {correctLabel}
         <form className={style('form')} method="submit" onSubmit={handleOnSubmit}>
           <div className={style('form-row')}>
-            Nazwa fundacji : 
             <label>
+              Nazwa fundacji:     
               <input onChange={handleOnChangeNameFoundation} className={style('input')} type="text" value={nameFoundation}/>
             </label>
           </div>
@@ -160,8 +160,8 @@ const AddFoundationPopup = ({
           </div>
           <div className={style('form-row')}>
             <label>
-              Potwierdź
-              <input onChange={handleOnChangeIsGlobal} className={style('input')} type="checkbox" value={isGlobal}/>
+              Potwierdź :
+              <input onChange={handleOnChangeIsGlobal} className={style('input-checkbox')} type="checkbox" value={isGlobal}/>
             </label>
           </div>
           <button type="submit">Zatwierdź</button>
