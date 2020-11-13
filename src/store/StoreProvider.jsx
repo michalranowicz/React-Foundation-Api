@@ -9,12 +9,6 @@ const StoreProvider = ({children})=>{
   const [foundations, setFoundations]= useState([]);
   const [foundationCategory, setFoundationCategory] = useState([]);
   const [updateStore, setUpdateStore]= useState(false);
-  // const changeFoundation= false;
-  // const changeFoundationCategory = false;
-  
-
- 
-
   const  fetchDataFoundation = async () => {
 
     const { data } = await request.get('/Foundation');
@@ -41,6 +35,7 @@ const StoreProvider = ({children})=>{
     setUpdateStore(false);
   },[updateStore])
 
+
   return(
     <StoreContext.Provider value={{
       foundations,
@@ -48,7 +43,8 @@ const StoreProvider = ({children})=>{
       foundationCategory,
       setFoundationCategory,
       updateStore,
-      setUpdateStore
+      setUpdateStore,
+      
     }}>
       {children}
     </StoreContext.Provider>

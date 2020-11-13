@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import bemCssModule from 'bem-css-modules';
 
 import {Link} from 'react-router-dom'
@@ -15,7 +15,7 @@ const FoundationCategoryItem = (props) =>{
   // const[isPopupOpen, setIsPopupOpen]= useState(false)
 
   const {setFoundationCategory} = useContext(StoreContext);
-  const {updateStore, setUpdateStore}= useContext(StoreContext);
+  const {setUpdateStore}= useContext(StoreContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 //  const [isEditMode, setIsEditMode] = useState(false)
 
@@ -32,7 +32,12 @@ const handleDeleteCategory= async (event)=>{
 }
 const handleOnClick = ()=> setIsModalOpen(true);
  
-const handleOnClose=()=>setIsModalOpen(false)
+const handleOnClose=()=>setIsModalOpen(false);
+
+
+// useEffect(()=>{
+//   handleNavidate()
+// },[handleNavidate()])
 // const handleOnClose = (event)=>{
 //   if(event){
 //     event.preventDefault();
@@ -42,7 +47,7 @@ const handleOnClose=()=>setIsModalOpen(false)
 
   return(
     <div>
-      <li className={style('link')}><Link to={`/${name}`}>{name}</Link></li>
+      <li className={style('link')} ><Link to={`/${id}`}>{name}</Link></li>
       <button onClick={handleDeleteCategory}className={style('link')}value={id}>Usuń</button>
       <button onClick={handleOnClick}className={style('link')}>Edytuj</button>
       <AddCategoryPopup handleOnClose={handleOnClose} isModalOpen={isModalOpen} id={id} />

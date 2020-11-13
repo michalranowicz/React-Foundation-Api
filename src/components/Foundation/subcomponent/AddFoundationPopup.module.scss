@@ -1,0 +1,19 @@
+.foundation-popup {
+  display: flex;
+  flex-direction: column;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-row {
+    display: flex;
+  }
+  &__input {
+    display: flex;
+    flex-grow: 1;
+  }
+  &__validate-message {
+    color: red;
+  }
+}

@@ -9,8 +9,6 @@ import FoundationCategory from './FoundationCategory';
 import request from '../../../helpers/request';
 
 const style = bemCssModules(AddCategoryPopupStyles);
-// const {foundationCategory} = useContext(StoreContext);
-// const foundation = foundationCategory
 
 const validateForm = (checkName,nameCategory,categoryDescription, setValidateMessage) =>{
 
@@ -138,7 +136,7 @@ const AddCategoryPopup = ({
               <input onChange={handleOnChangeCategoryDescription}className={style('input')} type="text" value={categoryDescription}/>
             </label>
           </div>
-          <button type="submit">Zatwierdx</button>
+          <button type="submit">Zatwierdź</button>
           <button onClick={handleOnCloseModal} type="button">Anuluj</button>
 
         </form>

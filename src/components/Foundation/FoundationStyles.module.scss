@@ -1,0 +1,13 @@
+.foundation-card {
+  margin-bottom: 20px;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+  border-radius: 5px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}

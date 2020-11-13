@@ -11,26 +11,20 @@ import AddCategoryPopup from './AddCategoryPopup';
 
   const style = bemCssModule(AsideMenuStyle);
    
-  const {foundationCategory} = useContext(StoreContext);
 
 
 
 const FoundationCategory = ()=>{
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const {foundationCategory} = useContext(StoreContext);
+
+
   const foundationCategoryListItem = foundationCategory.map(category =>(<FoundationCategoryItem key={category.id} {...category}/>
  ))
  const handleOnClose = ()=> setIsModalOpen(false);
 
  const handleOnClick = ()=> setIsModalOpen(true);
-
-// const hidePopup = (event)=>{
-//   if(event){
-//     event.preventDefault();
-//   }
-//   setIsPopupOpen(false);
-// } ;
-
   return(
     <React.Fragment>
       <p className={style('title')}>Katalog fundacji</p>
