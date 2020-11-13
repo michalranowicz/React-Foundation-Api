@@ -9,6 +9,7 @@ const StoreProvider = ({children})=>{
   const [foundations, setFoundations]= useState([]);
   const [foundationCategory, setFoundationCategory] = useState([]);
   const [updateStore, setUpdateStore]= useState(false);
+
   const  fetchDataFoundation = async () => {
 
     const { data } = await request.get('/Foundation');

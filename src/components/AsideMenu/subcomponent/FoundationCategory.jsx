@@ -36,7 +36,7 @@ const FoundationCategory = ()=>{
             {foundationCategoryListItem}
           </ul>
       </nav>
-      <button onClick={handleOnClick}>Dodaj kategorię fundacji</button>
+      <button className={style('add-button')} onClick={handleOnClick}>Dodaj kategorię fundacji</button>
       <AddCategoryPopup handleOnClose={handleOnClose} isModalOpen={isModalOpen} isEditMode={false} />
     
   </React.Fragment>

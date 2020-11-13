@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import bemCssModule from 'bem-css-modules';
 
+// styles
 import {default as FoundationStyles} from './FoundationStyles.module.scss';
 import { StoreContext } from '../../store/StoreProvider';
 import request from '../../helpers/request'
@@ -33,12 +34,15 @@ const Foundation = (props) =>{
 
   
   return(
-    <li>
+    <li >
       <article className={style()}>
         <h3 className={style('title')}>{name}</h3>
-        <p>{shortDescription}</p>
-        <button onClick={handleDeleteFoundation} value={id}>Usuń</button>
-        <button onClick={handleOnClick}>Edytuj</button>
+        <p className={style('description-title')}>Opis fundacji:</p>
+        <p className={style('description')}>{shortDescription}</p>
+        <div className={style('card-button-container')}>
+          <button onClick={handleDeleteFoundation} value={id}>Usuń</button>
+          <button onClick={handleOnClick}>Edytuj</button>
+        </div>
         <AddFoundationPopup handleOnClose={handleOnClose} isModalOpen={isModalOpen} {...props}/>
       </article>
     </li>
@@ -47,3 +51,4 @@ const Foundation = (props) =>{
 
 
 export default Foundation;
+

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import bemCssModule from 'bem-css-modules'
 
-import {default as foundationStyles} from './FoundationStyles.module.scss';
+import {default as foundationStyles} from '../Content/ContentStyles.module.scss';
 import { StoreContext } from '../../store/StoreProvider';
 
 import Foundation from '../Foundation/Foundation'
@@ -31,10 +31,12 @@ const FoundationList = (props) =>{
 
   return(
     <section>
-      <h2>kundacje kategorii: {name}</h2>
-      <button onClick={handleOnClick}>Dodaj nową fundację</button>
+      <div className={style('content-header-container')}>
+        <h2>Fundacje kategorii: {name}</h2>
+        <button onClick={handleOnClick} className={style('content-header-button')}>Dodaj nową fundację</button>
+      </div>
       <AddFoundationPopup handleOnClose={handleOnClose} isModalOpen={isModalOpen} foundationCategoryId={id} isEditMode={false}/>
-      <ul>
+      <ul className={style('list')}>
         {foundationsFilterList}
       </ul>
     </section>

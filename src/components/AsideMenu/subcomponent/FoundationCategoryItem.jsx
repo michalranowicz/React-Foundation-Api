@@ -48,12 +48,18 @@ const handleOnClose=()=>setIsModalOpen(false);
   return(
     <div>
       <li className={style('link')} ><Link to={`/${id}`}>{name}</Link></li>
-      <button onClick={handleDeleteCategory}className={style('link')}value={id}>Usuń</button>
-      <button onClick={handleOnClick}className={style('link')}>Edytuj</button>
+      <div className={style('button-container')}>
+        <button onClick={handleDeleteCategory}className={style('button')}value={id}>Usuń</button>
+        <button onClick={handleOnClick}className={style('button')}>Edytuj</button>
+      </div>
       <AddCategoryPopup handleOnClose={handleOnClose} isModalOpen={isModalOpen} id={id} />
+    </div>
+
+
+
  
 
-    </div>
+    
 
   )
 }

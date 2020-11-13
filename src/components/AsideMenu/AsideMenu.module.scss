@@ -1,12 +1,15 @@
 .aside-menu {
   padding: 15px;
   width: 200px;
-  background-color: #ddd;
+  background-color: #38739e;
   position: relative;
+  min-height: calc(100vh - 60px);
+  min-width: 200px;
 
   &__nav-wrapper {
     position: sticky;
-    top: 80px;
+    top: 100px;
+    color: white;
   }
 
   &__title {
@@ -19,13 +22,34 @@
   &__link {
     margin-top: 10px;
     padding: 3px 5px;
-    color: #000;
+    color: white;
     text-align: center;
-    background-color: lightsalmon;
+    background-color: #7891a3;
     cursor: pointer;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    text-decoration: none;
 
     &:hover {
-      background-color: #f00;
+      background-color: #c0d3e0;
     }
+  }
+  &__button-container {
+    display: flex;
+    flex-direction: row;
+  }
+  &__button {
+    margin-top: 0;
+    flex-grow: 1;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__add-button {
+    margin-top: 10px;
+    width: 100%;
+    line-height: 20px;
   }
 }
