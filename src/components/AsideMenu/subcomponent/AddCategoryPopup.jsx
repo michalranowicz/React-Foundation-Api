@@ -17,13 +17,13 @@ const validateForm = (checkName,nameCategory,categoryDescription, setValidateMes
      return 'Podana kategoria fundacji istnieje';
     
   }else if(nameCategory.length <= 3){
-    setValidateMessage('nazwa za krótka! min 3 znaki');
-     return 'nazwa za krótka! min 3 znaki';
+    setValidateMessage('Nazwa za krótka! min 3 znaki');
+     return 'Nazwa za krótka! min 3 znaki';
     
     
   }else if(nameCategory.length> 128){
-    setValidateMessage('nazwa za długa! max 128 znaków');
-    return 'nazwa za długa! max 128 znaków'
+    setValidateMessage('Nazwa za długa! max 128 znaków');
+    return 'Nazwa za długa! max 128 znaków'
   }else if(categoryDescription.length> 512 ){
     setValidateMessage('Opis kategorii za długi max 512 znaków')
     return 'Opis kategorii za długi max 512 znaków'
@@ -125,25 +125,25 @@ const AddCategoryPopup = ({
       <div className={style()}>{correctLabel}
         <form className={style('form')} method="submit" onSubmit={handleOnSubmit}>
           <div className={style('form-row')}>
-            Nazwa kategorii fundacji:
             <label>
-              <input onChange={handleOnChangeNameCategory}className={style('input')} type="text" value={nameCategory}/>
+            Nazwa kategorii fundacji:
             </label>
+            <input onChange={handleOnChangeNameCategory}className={style('input')} type="text" value={nameCategory}/>
           </div>
           <div className={style('form-row')}>
-            Opis kategorii:
             <label>
-              <input onChange={handleOnChangeCategoryDescription}className={style('input')} type="text" value={categoryDescription}/>
+            Opis kategorii:
             </label>
+            <textarea rows={'5'} onChange={handleOnChangeCategoryDescription}className={style('input')} type="text" value={categoryDescription}/>
           </div>
           <button type="submit">Zatwierdź</button>
           <button onClick={handleOnCloseModal} type="button">Anuluj</button>
-
         </form>
       </div>
-
     </Modal>
   )
 }
 
 export default AddCategoryPopup;
+
+

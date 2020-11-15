@@ -3,11 +3,7 @@
   padding: 15px;
   flex-grow: 1;
   max-width: 1366px;
-  // background-color: #dbf0ff;
   background-color: #e3f1fc;
-  // li:nth-of-type(2) {
-  //   background-color: aquamarine;
-  // }
   &__content-header-container {
     display: flex;
     flex-direction: row;
@@ -19,10 +15,6 @@
   }
   &__list {
     list-style-type: none;
-
-    // ul:nth-child(2n) {
-    //   background-color: aquamarine;
-    // }
   }
   &__list > li:nth-child(2n) {
     background-color: #e3e9f2;

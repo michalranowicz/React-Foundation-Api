@@ -20,4 +20,19 @@
     align-self: center;
     flex-grow: 1;
   }
+  @media (orientation: portrait) and (min-width: 320px) {
+    &__title {
+      font-size: 0.6rem;
+    }
+  }
+  @media (orientation: portrait) and (min-width: 767px) {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+  @media (orientation: landscape) and (min-width: 532px) {
+    &__title {
+      font-size: 0.9rem;
+    }
+  }
 }

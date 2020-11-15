@@ -10,4 +10,10 @@
   min-height: calc(100vh-60px);
   display: flex;
   background-color: #e3f1fc;
+  @media (orientation: portrait) and (min-width: 319px) {
+    flex-direction: column;
+  }
+  @media (orientation: portrait) and (min-width: 767px) {
+    flex-direction: row;
+  }
 }

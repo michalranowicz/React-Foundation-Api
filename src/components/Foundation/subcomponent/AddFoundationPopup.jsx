@@ -115,19 +115,17 @@ const AddFoundationPopup = ({
     handleOnClose()
   }
 
-
-
   const handleOnCloseModal= (event)=>{
     event.preventDefault();
     handleOnClose();
     resetStateOfInput();
   }
+  
   useEffect(()=>{
     if(isModalOpen){
       resetStateOfInput();
-      // setIsGlobal(false)
+      setIsGlobal(false)
     }
-    
   }, [isModalOpen]);
   const correctLabel = isEditMode ? 'Edytuj fundację' : 'Dodaj fundację';
 
@@ -142,27 +140,28 @@ const AddFoundationPopup = ({
         <form className={style('form')} method="submit" onSubmit={handleOnSubmit}>
           <div className={style('form-row')}>
             <label>
-              Nazwa fundacji:     
-              <input onChange={handleOnChangeNameFoundation} className={style('input')} type="text" value={nameFoundation}/>
+              Nazwa fundacji:  
             </label>
+            <input onChange={handleOnChangeNameFoundation} className={style('input')} type="text" value={nameFoundation}/>
+   
           </div>
           <div className={style('form-row')}>
             <label>
               Krótki opis :
-              <input onChange={handleOnChangeShortDescription} className={style('input')} type="text" value={shortDescription}/>
             </label>
+            <textarea rows={'5'} onChange={handleOnChangeShortDescription} className={style('input')} type="text" value={shortDescription}/>
           </div>
           <div className={style('form-row')}>
             <label>
               Słowa kluczowe :
-              <input onChange={handleOnChangeHtmlDescription} className={style('input')} type="text" value={htmlDescription}/>
             </label>
+            <input onChange={handleOnChangeHtmlDescription} className={style('input')} type="text" value={htmlDescription}/>
           </div>
           <div className={style('form-row')}>
             <label>
               Potwierdź :
-              <input onChange={handleOnChangeIsGlobal} className={style('input-checkbox')} type="checkbox" value={isGlobal}/>
             </label>
+            <input onChange={handleOnChangeIsGlobal} className={style('input-checkbox')} type="checkbox" value={isGlobal}/>
           </div>
           <button type="submit">Zatwierdź</button>
           <button onClick={handleOnCloseModal} type="button">Anuluj</button>
@@ -173,3 +172,6 @@ const AddFoundationPopup = ({
 };
 
 export default AddFoundationPopup
+
+           
+            

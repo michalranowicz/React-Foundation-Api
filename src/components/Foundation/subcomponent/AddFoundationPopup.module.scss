@@ -7,16 +7,18 @@
   &__form {
     display: flex;
     flex-direction: column;
+    padding: 5px;
   }
   &__form-row {
     display: flex;
+    flex-direction: column;
     margin-top: 5px;
   }
   &__input {
     display: flex;
-    width: 162%;
     flex-grow: 1;
     margin-top: 2px;
+    padding: 5px;
   }
   &__input-checkbox {
     display: flex;

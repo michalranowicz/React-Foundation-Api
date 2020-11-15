@@ -7,6 +7,7 @@
   &__form {
     display: flex;
     flex-direction: column;
+    padding: 5px;
   }
   &__form-row {
     display: flex;
@@ -16,7 +17,8 @@
   &__input {
     display: flex;
     flex-grow: 1;
-    width: 100%;
+    margin-top: 2px;
+    padding: 5px;
   }
   &__validate-message {
     color: red;
